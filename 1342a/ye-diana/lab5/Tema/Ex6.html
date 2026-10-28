@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bec</title>
+<script>
+var contor = 0;
+
+function MyFunction() {
+    var bec = document.getElementById("bec");
+    console.log(bec.src);
+
+    if (bec.src.includes("stins")) {
+        bec.src = "Bec aprins.gif";
+        contor++;
+        document.getElementById("rezultat").innerHTML =
+            "Becul a fost aprins de " + contor + " ori.";
+    } else {
+        bec.src = "Bec stins.gif";
+    }
+}
+</script>
+</head>
+<body>
+
+<h1>Bec</h1>
+
+<p>
+<img id="bec" src="Bec stins.gif" width="100" height="180" onclick="MyFunction()">
+</p>
+
+<p id="rezultat">Becul a fost aprins de 0 ori.</p>
+
+</body>
+</html>
